@@ -6,7 +6,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     mode: 'none',
     entry: {
-        main: path.resolve(__dirname, '../assets/main.js')
+        main: path.resolve(__dirname, '../src/main.js')
     },
     module: {
         rules: [
@@ -42,7 +42,7 @@ module.exports = {
         //     }
         // ])
         new HtmlWebpackPlugin({
-            template: 'test/web_project/assets/fonts/font-preview.html',
+            template: 'test/web_project/src/fonts/font-preview.html',
             inject: true,
             filename: 'index.html',
             chunks: ['main'],

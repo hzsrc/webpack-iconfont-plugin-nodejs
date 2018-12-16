@@ -23,12 +23,12 @@ var path = require('path');
 var dir = 'test/web_project/'
 var options = {
     fontName: 'my-app-icon',
-    // template: path.join(dir, 'assets/fonts/css.njk'),
-    svgs: path.join(dir, 'assets/svgs/*.svg'),
-    fontsOutput: path.join(dir, 'assets/fonts/'),
-    cssOutput: path.join(dir, 'assets/fonts/font.css'),
-    jsOutput: path.join(dir, 'assets/fonts/fonts.js'),
-    htmlOutput: path.join(dir, 'assets/fonts/font-preview.html'),
+    // template: path.join(dir, 'src/fonts/css.njk'),
+    svgs: path.join(dir, 'src/svgs/*.svg'),
+    fontsOutput: path.join(dir, 'src/fonts/'),
+    cssOutput: path.join(dir, 'src/fonts/font.css'),
+    jsOutput: path.join(dir, 'src/fonts/fonts.js'),
+    htmlOutput: path.join(dir, 'src/fonts/font-preview.html'),
     //formats: ['ttf', 'woff2', 'woff', 'svg'],
     cssPrefix: 'my-icon'
 };
@@ -51,12 +51,12 @@ module.exports = {
     plugins: [
         new WebpackIconfontPluginNodejs({
             fontName: 'my-app-icon',
-            // template: path.join(dir, 'assets/fonts/css.njk'),
-            svgs: path.join(dir, 'assets/svgs/*.svg'),
-            fontsOutput: path.join(dir, 'assets/fonts/'),
-            cssOutput: path.join(dir, 'assets/fonts/font.css'),
-            jsOutput: path.join(dir, 'assets/fonts/fonts.js'),
-            htmlOutput: path.join(dir, 'assets/fonts/font-preview.html'),
+            // template: path.join(dir, 'src/fonts/css.njk'),
+            svgs: path.join(dir, 'src/svgs/*.svg'),
+            fontsOutput: path.join(dir, 'src/fonts/'),
+            cssOutput: path.join(dir, 'src/fonts/font.css'),
+            jsOutput: path.join(dir, 'src/fonts/fonts.js'),
+            htmlOutput: path.join(dir, 'src/fonts/font-preview.html'),
             //formats: ['ttf', 'woff2', 'woff', 'svg'],
             cssPrefix: 'my-icon'
         }),
@@ -69,7 +69,7 @@ module.exports = {
 
 #### `svgs` (required)
 Type: `String`    
-File path(s) or glob(s) to svg icons. Recommend to use *.svg like this: /src/project/assets/*.svg, this can watch svgs by directory.
+File path(s) or glob(s) to svg icons. Recommend to use *.svg like this: /src/project/src/*.svg, this can watch svgs by directory.
 
 
 #### `fontsOutput` (required)
