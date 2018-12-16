@@ -13,6 +13,7 @@
     font-family: 'my-app-icon' !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
 }
 
 
