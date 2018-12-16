@@ -1,5 +1,5 @@
 var path = require('path');
-var IconfontPlugin = require('../../../src/index.js');
+var WebpackIconfontPluginNodejs = require('../../../src/index.js');
 var options = require('../../iconfont-options.js');
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -33,7 +33,7 @@ module.exports = {
         path: path.resolve(__dirname, '../dist')
     },
     plugins: [
-        new IconfontPlugin(options),
+        new WebpackIconfontPluginNodejs(options),
         // new CopyWebpackPlugin([
         //     {
         //         from: path.resolve(__dirname, '../static'),

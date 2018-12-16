@@ -1,35 +1,39 @@
 # webpack-iconfont-plugin-nodejs
 
-SVG to iconfont conversion plugin for webpack.
+Use svg files to build iconfont files(ttf,woff2,woff,eot,svg), css file, js data file and html-preview file.
 
 ## Features:
 
-* Supported font formats: WOFF2, WOFF, EOT, TTF and SVG.
-* Semantic: uses Unicode private use area.
-* Cross-browser: IE8+.
-* Generates SCSS file, custom templates possible.
+* Iconfont output formats: WOFF2, WOFF, EOT, TTF and SVG.
+* Generates CSS file, js data file, html-preview file.
+* Supports webpack and hot reloading at devlopment time. Iconfont files and css file will be rebuilt while any svg file changed or added, then page will refresh.
+* Supports running by nodejs directly.
+* Fixed output files with the same svg files. It means that if the svg files are not changed, all the output files(ttf,woff,css...) will not change, even though you build them again.
+* High iconfont precision.
 
 ## Usage:
+You can use it by nodejs directly or use it in webpack
+####1. Use by nodejs directly:   
 
 `build/svg2font.js:`
 
 ```js
-var IconfontPlugin = require('webpack-iconfont-plugin-nodejs');
+var WebpackIconfontPluginNodejs = require('webpack-iconfont-plugin-nodejs');
 var path = require('path');
+var dir = 'test/web_project/'
+var options = {
+    fontName: 'my-app-icon',
+    // template: path.join(dir, 'assets/fonts/css.njk'),
+    svgs: path.join(dir, 'assets/svgs/*.svg'),
+    fontsOutput: path.join(dir, 'assets/fonts/'),
+    cssOutput: path.join(dir, 'assets/fonts/font.css'),
+    jsOutput: path.join(dir, 'assets/fonts/fonts.js'),
+    htmlOutput: path.join(dir, 'assets/fonts/font-preview.html'),
+    //formats: ['ttf', 'woff2', 'woff', 'svg'],
+    cssPrefix: 'my-icon'
+};
 
-new IconfontPlugin({
-  fontName: 'flaginfo-app-icon',
-  svgs: path.resolve(__dirname, '../src/assets/fonts/svg/*.svg'),
-  template: path.resolve(__dirname, '../src/assets/fonts/css.njk'),
-  fontsOutput: path.resolve(__dirname, '../src/assets/fonts'),
-  cssOutput: path.resolve(__dirname, '../src/styles/font.css'),
-  htmlOutput: path.resolve(__dirname, '../src/assets/fonts/font-preview.html'),
-  formats: ['ttf', 'woff2', 'woff', 'svg'],
-  cssPrefix: 'van-icon'
-}).compile(null, cb => {
-  console.log('Done')
-})
-
+new WebpackIconfontPluginNodejs(options).build()
 ```
 
 Then you can run this command to build iconfont by svg:
@@ -38,55 +42,75 @@ node build/svg2font.js
 ```
 Or you can set this command to script of package.json, and run it by npm.
 
+####2. Use by webpack: 
+```js
+var WebpackIconfontPluginNodejs = require('../../../src/index.js');
+
+module.exports = {
+    //... others
+    plugins: [
+        new WebpackIconfontPluginNodejs({
+            fontName: 'my-app-icon',
+            // template: path.join(dir, 'assets/fonts/css.njk'),
+            svgs: path.join(dir, 'assets/svgs/*.svg'),
+            fontsOutput: path.join(dir, 'assets/fonts/'),
+            cssOutput: path.join(dir, 'assets/fonts/font.css'),
+            jsOutput: path.join(dir, 'assets/fonts/fonts.js'),
+            htmlOutput: path.join(dir, 'assets/fonts/font-preview.html'),
+            //formats: ['ttf', 'woff2', 'woff', 'svg'],
+            cssPrefix: 'my-icon'
+        }),
+    ]
+};
+
+```
+
 ## Options
 
 #### `svgs` (required)
-Type: `String`
-
+Type: `String`    
 File path(s) or glob(s) to svg icons. Recommend to use *.svg like this: /src/project/assets/*.svg, this can watch svgs by directory.
 
 
 #### `fontsOutput` (required)
-Type: `String`
-
+Type: `String`    
 Destination for generated font files (directory).
 
 
 #### `cssOutput` (required)
-Type: `String`
-
-Destination for generated scss file (file name).
-
-### `htmlOutput`
-Type: `String` Default value: [path of cssOutput] + `/font-preview.html`. Or `false` value.
-
-Destination for generated html preview file (file name). If `false`, no html output.
-
-#### `template`
-Type: `String` Default value: `css`
-
-Type of built in style templates ('css', 'scss', 'scss-mixins') or path to custom template.
-
+Type: `String`    
+Destination for generated css file (file name).
 
 #### `fontName`
-Type: `String` Default value: `iconfont`
-
-This dtermines both the font family name (e.g. `font-family: 'iconfont'`, as well as the prefix for scss variables, mixins and classnames (e.g. `.iconfont-arrow`).
-
-
-#### `fontHeight`
-Type: `Number` Default value: `MAX(icons.height)`
-
-The outputted font height (defaults to the height of the highest input icon).
+Type: `String`    
+Default value: `iconfont`    
+The font family name (e.g. `font-family: 'iconfont'`).
 
 
-#### `normalize`
-Type: `Boolean` Default value: `false`
+### `htmlOutput`
+Type: `String`     
+Default value: [path of cssOutput] + `/font-preview.html`. Or `false` value.    
+Destination for generated html-preview file (file name). If `false`, no html and js output.
 
-Normalize icons by scaling them all to the height of the highest icon.
+#### `template`
+Type: `String`    
+Default value: `css`    
+Type of built in style templates ('css', 'scss', 'scss-mixins') or path to custom template.
 
+#### `formats`
+Type: `Array of String`     
+Default value: `['svg', 'ttf', 'eot', 'woff2', 'woff']`    
+The output iconfont formats.
 
 #### `cssPrefix`
-Type: `String` Default value: fontName
-
+Type: `String`    
+Default value: fontName    
 Css className prefix.
+
+#### Other options for advanced
+Please refer to:    
+https://www.npmjs.com/package/svgicons2svgfont    
+https://www.npmjs.com/package/svg2ttf    
+https://www.npmjs.com/package/ttf2eot    
+https://www.npmjs.com/package/ttf2woff    
+https://www.npmjs.com/package/ttf2woff2    
