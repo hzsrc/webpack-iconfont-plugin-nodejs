@@ -1,7 +1,7 @@
 {
   "name": "webpack-iconfont-plugin-nodejs",
-  "version": "1.0.8",
-  "description": "Webpack plugin to create iconfont from svgs. Forked from webpack-iconfont-plugin.",
+  "version": "1.0.9",
+  "description": "Use svg files to build iconfont files(ttf,woff2,woff,eot,svg), css file, js data file and html preview file.",
   "license": "MIT",
   "repository": {
     "type": "https",
