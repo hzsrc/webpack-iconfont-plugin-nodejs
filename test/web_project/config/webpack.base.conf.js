@@ -19,10 +19,6 @@ module.exports = {
                 loaders: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.html$/,
-                use: 'raw-loader'
-            },
-            {
                 test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
@@ -46,7 +42,7 @@ module.exports = {
         //     }
         // ])
         new HtmlWebpackPlugin({
-            template: 'test/web_project/tpl.html',
+            template: 'test/web_project/assets/fonts/font-preview.html',
             inject: true,
             filename: 'index.html',
             chunks: ['main'],

@@ -26,6 +26,7 @@
             font-size:40px;
             font-style: normal;
             line-height: 1;
+            display: block;
         }
         .flex-tb div:hover {
             position: absolute;
@@ -46,9 +47,7 @@
       {% for glyph in glyphs %}
         <section>
             <header contenteditable>{{ cssPrefix }}-{{ glyph.name }}</header>
-            <div>
-                <i class="{{ cssPrefix }}-{{ glyph.name }}"></i>
-            </div>
+            <div><i class="{{ cssPrefix }}-{{ glyph.name }}"></i></div>
         </section>
       {% endfor %}
     </div>
