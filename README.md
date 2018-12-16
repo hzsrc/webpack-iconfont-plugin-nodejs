@@ -11,6 +11,20 @@ Use svg files to build iconfont files(ttf,woff2,woff,eot,svg), css file, js data
 * Fixed output files with the same svg files. It means that if the svg files are not changed, all the output files(ttf,woff,css...) will not change, even though you build them again.
 * High iconfont precision.
 
+## Test for preview:
+````bash
+git clone https://github.com/hzsrc/webpack-iconfont-plugin-nodejs.git
+cd webpack-iconfont-plugin-nodejs
+npm install
+npm run dev
+````
+Or visit this preview: http://test.hz300.com/webpack4/iconfontPreview.html
+
+
+## Install:
+`npm install webpack-iconfont-plugin-nodejs`
+
+
 ## Usage:
 You can use it by nodejs directly or use it in webpack
 ####1. Use by nodejs directly:   
