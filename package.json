@@ -33,7 +33,7 @@
     "thro-debs": "^1.0.7",
     "ttf2eot": "^2.0.0",
     "ttf2woff": "^2.0.1",
-    "ttf2woff2": "^2.0.3",
+    "ttf2woff2-no-gyp": "^2.0.5",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
