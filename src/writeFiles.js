@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-module.exports = function (result) {
+module.exports = function (result, writeFileFunc) {
     var options = result.options;
     var fnDatas = {}
     options.formats.map(format => {
@@ -18,24 +18,19 @@ module.exports = function (result) {
         fnDatas[options.htmlOutput] = result.html;
     }
     if (options.jsOutput) {
-        fnDatas[options.jsOutput] = 'export default ' + JSON.stringify(result.glyphDatas.map(g => {
-            return {
-                name: g.metadata.name,
-                unicode: g.metadata.unicode[0].charCodeAt(0).toString(16),
-                svg: g.contents
-            }
-        }), null, 4) + '\n';
+        fnDatas[options.jsOutput] = result.js;
     }
+    writeFileFunc = writeFileFunc || writeFile
     return Promise.all(
-        Object.keys(fnDatas).map(fn => writeFile(fn, fnDatas[fn]))
+        Object.keys(fnDatas).map(fn => writeFileFunc(fn, fnDatas[fn]))
     ).then(t => result)
 }
 
-function writeFile(fn, data) {
+function writeFile(fileName, data) {
     return new Promise((resolve, reject) => {
-        var dir = path.dirname(fn);
+        var dir = path.dirname(fileName);
         mkdirs(dir)
-        fs.writeFile(fn, data, err => {
+        fs.writeFile(fileName, data, err => {
             if (err) reject(err)
             else resolve()
         });

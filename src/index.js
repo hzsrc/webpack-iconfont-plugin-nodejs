@@ -40,7 +40,7 @@ module.exports = class IconfontPlugin {
     build(callback) {
         return nodify(
             generate(this.options)
-                .then(writeFiles)
+                .then(result => writeFiles(result))
                 .then(ret => {
                     console.log('Font+css have been built by ' + ret.glyphDatas.length + ' svg-icons.');
                     return ret

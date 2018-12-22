@@ -50,6 +50,15 @@ module.exports = function (fileMark, glyphDatas, options) {
     if (options.htmlOutput) {
         cssHtml.html = nunjucks.render(htmlTemplateFile, nunjucksOptions)
     }
+    if (options.jsOutput) {
+        cssHtml.js = 'export default ' + JSON.stringify(glyphDatas.map(g => {
+            return {
+                name: g.metadata.name,
+                unicode: g.metadata.unicode[0].charCodeAt(0).toString(16),
+                svg: g.contents
+            }
+        }), null, 4) + '\n'
+    }
 
     return cssHtml;
 }
