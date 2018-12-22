@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-module.exports = function (result, writeFileFunc) {
+module.exports = function (result) {
     var options = result.options;
     var fnDatas = {}
     options.formats.map(format => {
@@ -20,9 +20,8 @@ module.exports = function (result, writeFileFunc) {
     if (options.jsOutput) {
         fnDatas[options.jsOutput] = result.js;
     }
-    writeFileFunc = writeFileFunc || writeFile
     return Promise.all(
-        Object.keys(fnDatas).map(fn => writeFileFunc(fn, fnDatas[fn]))
+        Object.keys(fnDatas).map(fn => writeFile(fn, fnDatas[fn]))
     ).then(t => result)
 }
 

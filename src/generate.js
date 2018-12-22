@@ -1,31 +1,52 @@
 var md5 = require('./md5');
 var defaultOptions = require('./defaultOptions')
-var globFiles = require('./globFiles')
+var globbyFiles = require('./globbyFiles')
 var getGlyphDatas = require('./getGlyphDatas')
 var glyphs2svgFont = require('./glyphs2svgFont')
 var svgFont2otherFonts = require('./svgFont2otherFonts')
 var glyphs2cssAndHtml = require('./glyphs2cssAndHtml')
 
-module.exports = function (userOptions) {
+exports.byGlobby = function (userOptions) {
+    return globbyFiles(userOptions.svgs)
+        .then(foundFiles => {
+            return exports.byFiles(foundFiles, userOptions)
+        })
+}
+
+exports.byFiles = function (inputSvgFiles, userOptions) {
+    let options = Object.assign({}, defaultOptions, userOptions);
+    return getGlyphDatas(inputSvgFiles, options)
+        .then(glyphDatas => {
+            return exports.byGlyphDatas(glyphDatas, options)
+        })
+}
+
+/*
+glyphDatas:
+ [{
+    "contents": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg ...... </svg>",
+    "srcPath": "test/web_project/src/svgs/bookmark.svg",
+    "metadata": {
+        "path": "test/web_project/src/svgs/bookmark.svg",
+        "name": "bookmark",
+        "unicode": [""],
+        "renamed": false
+    }
+  }...]
+*/
+exports.byGlyphDatas = function (glyphDatas, userOptions) {
     let options = Object.assign(
         {},
         defaultOptions,
         userOptions,
         {
             cssPrefix: userOptions.cssPrefix || userOptions.fontName
-            // fileMark: userOptions.fileMark || (+new Date()).toString(16)
         }
     );
+    var result = {options};
 
-    var result = {options}
-    return globFiles(options.svgs)
-        .then(foundFiles => {
-            return getGlyphDatas(foundFiles, options)
-        })
-        .then(glyphDatas => {
-            result.glyphDatas = glyphDatas;
-            return glyphs2svgFont(glyphDatas, options)
-        })
+    result.glyphDatas = glyphDatas;
+    return glyphs2svgFont(glyphDatas, options)
         .then(svg => {
             return svgFont2otherFonts(svg, options)
         })
