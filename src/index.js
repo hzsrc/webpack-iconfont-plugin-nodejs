@@ -1,7 +1,6 @@
 const nodify = require('nodeify');
 const path = require('path');
 const fs = require('fs');
-const globParent = require('glob-parent');
 const generate = require('./generate')
 const writeFiles = require('./writeFiles')
 var thro_debs = require('thro-debs')
