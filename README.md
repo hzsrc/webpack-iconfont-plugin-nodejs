@@ -27,7 +27,7 @@ Or visit this preview: http://test.hz300.com/webpack4/iconfontPreview.html
 
 ## Usage:
 You can use it by nodejs directly or use it in webpack
-####1. Use by nodejs directly:   
+#### 1. Use by nodejs directly:   
 
 `build/svg2font.js:`
 
@@ -56,7 +56,7 @@ node build/svg2font.js
 ```
 Or you can set this command to script of package.json, and run it by npm.
 
-####2. Use by webpack: 
+#### 2. Use by webpack: 
 ```js
 var WebpackIconfontPluginNodejs = require('../../../src/index.js');
 
