@@ -58,7 +58,7 @@ Or you can set this command to script of package.json, and run it by npm.
 
 #### 2. Use by webpack: 
 ```js
-var WebpackIconfontPluginNodejs = require('../../../src/index.js');
+var WebpackIconfontPluginNodejs = require('webpack-iconfont-plugin-nodejs');
 
 module.exports = {
     //... others
