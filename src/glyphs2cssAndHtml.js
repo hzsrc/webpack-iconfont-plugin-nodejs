@@ -14,7 +14,7 @@ module.exports = function (fileMark, glyphDatas, options) {
 
     // options.cssOutput = path.resolve(options.cssOutput);
     if (options.htmlOutput === undefined) {
-        options.htmlOutput = path.join(path.dirname(options.cssOutput), 'font-preview.html');
+        options.htmlOutput = path.join(path.dirname(options.cssOutput), '_font-preview.html');
     }
     if (options.htmlOutput) {
         // html模板中css文件的相对文件名
