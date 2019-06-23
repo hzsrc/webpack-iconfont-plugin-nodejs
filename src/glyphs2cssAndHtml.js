@@ -51,15 +51,63 @@ module.exports = function (fileMark, glyphDatas, options) {
         cssHtml.html = nunjucks.render(htmlTemplateFile, nunjucksOptions)
     }
     if (options.jsOutput) {
-        cssHtml.js = 'export default ' + JSON.stringify(glyphDatas.map(g => {
+        var json = JSON.stringify(glyphDatas.map(g => {
             return {
                 name: g.metadata.name,
                 unicode: g.metadata.unicode[0].charCodeAt(0).toString(16),
-                svg: g.contents
+                svg: g.contents,
             }
-        }), null, 4) + '\n'
+        }), null, 4)
+        cssHtml.js = 'export default ' + json2Js(json) + '\n'
     }
 
     return cssHtml;
 }
 
+// json中的双引号换为单引号
+var JsNameReg = /^\w+$/
+function json2Js(jsonStr) {
+    var js = []
+    if (jsonStr) {
+        var isInQuot = false
+        var quotArr = []
+        var lastChar = ''
+        for (var i = 0, j = jsonStr.length; i < j; i++) {
+            var char = jsonStr[i]
+            if (isInQuot) {
+                // 记录引号内的
+                if (char === '\\') {
+                    var nextChar = jsonStr[i + 1] || ''
+                    if (nextChar !== '"') {
+                        quotArr.push(char)
+                    }
+                    quotArr.push(nextChar)
+                    i++
+                } else if (char === '"') {
+                    //结束引号内的
+                    var quotedStr = quotArr.join('')
+                    var nextChar2 = jsonStr[i + 1] || ''
+                    var quot = '\''
+                    if (nextChar2 === ':' && JsNameReg.test(quotedStr)) {
+                        //属性名不需要引号
+                        quot = ''
+                    }
+                    js.push(quot + quotedStr + quot) //换为单引号
+                    quotArr = []
+                    isInQuot = false
+                } else if (char === '\'') {
+                    quotArr.push('\\\'')
+                } else {
+                    quotArr.push(char)
+                }
+            } else if (char === '"') {
+                // 开始记录引号内的
+                isInQuot = true
+            } else {
+                js.push(char)
+            }
+            lastChar = char
+        }
+    }
+    return js.join('')
+}
