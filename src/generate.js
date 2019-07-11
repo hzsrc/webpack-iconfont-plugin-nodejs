@@ -48,12 +48,12 @@ exports.byGlyphDatas = function (glyphDatas, userOptions) {
     result.glyphDatas = glyphDatas;
     return glyphs2svgFont(glyphDatas, options)
         .then(svg => {
+            result.fileMark = md5(svg).slice(0, 8);
             return svgFont2otherFonts(svg, options)
         })
         .then(fonts => {
             Object.assign(result, fonts)
-            var fileMark = md5(result.svg).slice(0, 8);
-            return glyphs2cssAndHtml(fileMark, result.glyphDatas, options)
+            return glyphs2cssAndHtml(result.fileMark, result.glyphDatas, options)
         })
         .then(cssHtmlJs => {
             return Object.assign(result, cssHtmlJs)
