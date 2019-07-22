@@ -36,15 +36,15 @@ var WebpackIconfontPluginNodejs = require('webpack-iconfont-plugin-nodejs');
 var path = require('path');
 var dir = 'test/web_project/'
 var options = {
-    fontName: 'my-app-icon',
-    // template: path.join(dir, 'src/fonts/css.njk'),
-    svgs: path.join(dir, 'src/svgs/*.svg'),
-    fontsOutput: path.join(dir, 'src/fonts/'),
-    cssOutput: path.join(dir, 'src/fonts/font.css'),
-    jsOutput: path.join(dir, 'src/fonts/fonts.js'),
-    htmlOutput: path.join(dir, 'src/fonts/font-preview.html'),
-    //formats: ['ttf', 'woff2', 'woff', 'svg'],
-    cssPrefix: 'my-icon'
+  fontName: 'my-icons',
+  cssPrefix: 'ico',
+  svgs: path.join(dir, 'svgs/*.svg'),
+  // template: path.join(dir, 'css.njk'),
+  fontsOutput: path.join(dir, 'fonts/'),
+  cssOutput: path.join(dir, 'fonts/font.css'),
+  htmlOutput: path.join(dir, 'fonts/_font-preview.html'),
+  jsOutput: path.join(dir, 'fonts/fonts.js'),
+  // formats: ['ttf', 'woff', 'svg'],
 };
 
 new WebpackIconfontPluginNodejs(options).build()
@@ -59,20 +59,21 @@ Or you can set this command to script of package.json, and run it by npm.
 #### 2. Use by webpack: 
 ```js
 var WebpackIconfontPluginNodejs = require('webpack-iconfont-plugin-nodejs');
+var dir = 'test/web_project/'
 
 module.exports = {
     //... others
     plugins: [
         new WebpackIconfontPluginNodejs({
-            fontName: 'my-app-icon',
-            // template: path.join(dir, 'src/fonts/css.njk'),
-            svgs: path.join(dir, 'src/svgs/*.svg'),
-            fontsOutput: path.join(dir, 'src/fonts/'),
-            cssOutput: path.join(dir, 'src/fonts/font.css'),
-            jsOutput: path.join(dir, 'src/fonts/fonts.js'),
-            htmlOutput: path.join(dir, 'src/fonts/font-preview.html'),
-            //formats: ['ttf', 'woff2', 'woff', 'svg'],
-            cssPrefix: 'my-icon'
+          fontName: 'my-icons',
+          cssPrefix: 'ico',
+          svgs: path.join(dir, 'svgs/*.svg'),
+          // template: path.join(dir, 'css.njk'),
+          fontsOutput: path.join(dir, 'fonts/'),
+          cssOutput: path.join(dir, 'fonts/font.css'),
+          htmlOutput: path.join(dir, 'fonts/_font-preview.html'),
+          jsOutput: path.join(dir, 'fonts/fonts.js'),
+          // formats: ['ttf', 'woff', 'svg'],
         }),
     ]
 };
