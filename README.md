@@ -122,6 +122,25 @@ Type: `String`
 Default value: fontName    
 Css className prefix.
 
+
+#### `jsOutput`
+Type: `String`    
+Default value: undefined.    
+Path of a js file which contains all svg contents. Optional.
+
+
+#### `jsPrefix`
+Type: `String`    
+Default value: '/* eslint-disable */\n'    
+Js file content prefix.
+
+
+#### `cssFontPath`
+Type: `String`    
+Default value: path.relative(path.dirname(options.cssOutput), options.fontsOutput);    
+Font url path in `cssOutput` file.
+
+
 #### Other options for advanced
 Please refer to:    
 https://www.npmjs.com/package/svgicons2svgfont    

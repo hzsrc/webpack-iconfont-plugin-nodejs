@@ -21,7 +21,9 @@ module.exports = function (fileMark, glyphDatas, options) {
         options.htmlCssFile = path.relative(path.dirname(options.htmlOutput), options.cssOutput);
     }
     // css模板中的字体文件的相对路径
-    options.cssFontPath = path.relative(path.dirname(options.cssOutput), options.fontsOutput);
+    if(!options.cssFontPath) {
+        options.cssFontPath = path.relative(path.dirname(options.cssOutput), options.fontsOutput);
+    }
     if (options.cssFontPath !== '') {
         options.cssFontPath += '/'
     }
@@ -58,12 +60,14 @@ module.exports = function (fileMark, glyphDatas, options) {
                 svg: g.contents,
             }
         }), null, 4)
-        cssHtml.js = 'export default ' + json2Js(json) + '\n'
+        var prefix = options.jsPrefix || '/* eslint-disable */\n';
+        cssHtml.js = prefix + 'export default ' + json + '\n'
     }
 
     return cssHtml;
 }
 
+/*
 // json中的双引号换为单引号
 var JsNameReg = /^\w+$/
 function json2Js(jsonStr) {
@@ -111,3 +115,4 @@ function json2Js(jsonStr) {
     }
     return js.join('')
 }
+*/

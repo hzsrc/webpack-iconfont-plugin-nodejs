@@ -42,7 +42,7 @@ module.exports = class IconfontPlugin {
             generate.byGlobby(this.options)
                 .then(result => writeFiles(result))
                 .then(ret => {
-                    console.log('Font+css have been built by ' + ret.glyphDatas.length + ' svg-icons.');
+                    console.log('Font+css have been built with ' + ret.glyphDatas.length + ' svg-icons.');
                     return ret
                 })
                 .catch(console.error.bind(console)),
