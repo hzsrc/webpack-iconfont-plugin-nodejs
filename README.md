@@ -142,6 +142,7 @@ Font url path in `cssOutput` file.
 
 
 #### Other options for advanced
+Other options such as `startUnicode`, `prependUnicode` etc.     
 Please refer to:    
 https://www.npmjs.com/package/svgicons2svgfont    
 https://www.npmjs.com/package/svg2ttf    
