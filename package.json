@@ -27,29 +27,31 @@
     "glob-parent": "^3.1.0",
     "globby": "^8.0.1",
     "nodeify": "^1.0.1",
-    "nunjucks": "^3.1.6",
-    "svg2ttf": "^4.2.0",
-    "svgicons2svgfont": "^9.0.4",
+    "nunjucks": "^3.2.3",
+    "svg2ttf": "^5.1.0",
+    "svgicons2svgfont": "^9.1.1",
     "thro-debs": "^1.0.7",
-    "ttf2eot": "^2.0.0",
-    "ttf2woff": "^2.0.1",
+    "ttf2eot": "^2.0.0  ",
+    "ttf2woff": "^2.0.2",
     "ttf2woff2-no-gyp": "^2.0.5"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^4.6.0",
+    "copy-webpack-plugin": "^8.1.0",
     "css-loader": "^2.0.0",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.16.4",
     "file-loader": "^2.0.0",
-    "style-loader": "^0.23.1",
     "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "~4.27.1",
     "webpack-dev-middleware": "^3.4.0",
-    "webpack-dev-server": "^3.1.10",
+    "webpack-dev-server": "^3.11.2",
     "webpack-hot-middleware": "^2.24.3"
   },
-  "browserslist": ["IE >= 10"],
+  "browserslist": [
+    "IE >= 10"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   }
