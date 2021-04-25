@@ -4,13 +4,14 @@ var fs = require('fs');
 var path = require('path');
 
 module.exports = function (fileMark, glyphDatas, options) {
-    let cssTemplateFile = options.template;
+    var cssTemplateFile = options.template;
+    var basePath = path.resolve('.', 'node_modules/webpack-iconfont-plugin-nodejs/src')
 
     if (!fs.existsSync(cssTemplateFile)) {
-        cssTemplateFile = path.resolve(__dirname, `templates/${options.template}.njk`);
+        cssTemplateFile = path.resolve(basePath, `templates/${options.template}.njk`);
     }
 
-    let htmlTemplateFile = path.resolve(__dirname, `templates/html.njk`);
+    let htmlTemplateFile = path.resolve(basePath, `templates/html.njk`);
 
     // options.cssOutput = path.resolve(options.cssOutput);
     if (options.htmlOutput === undefined) {
@@ -58,13 +59,14 @@ module.exports = function (fileMark, glyphDatas, options) {
                 svg: g.contents,
             }
         }), null, 4)
-        cssHtml.js = 'export default ' + json2Js(json) + '\n'
+        cssHtml.js = '/* eslint-disable */\nexport default ' + json + '\n'
     }
 
     return cssHtml;
 }
 
 // json中的双引号换为单引号
+/*
 var JsNameReg = /^\w+$/
 function json2Js(jsonStr) {
     var js = []
@@ -111,3 +113,4 @@ function json2Js(jsonStr) {
     }
     return js.join('')
 }
+*/
