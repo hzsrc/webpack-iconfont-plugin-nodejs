@@ -3,6 +3,7 @@ var dir = 'test/web_project/'
 module.exports = {
     fontName: 'my-app-icon',
     // template: path.join(dir, 'src/fonts/css.njk'),
+    htmlTemplate: path.join(dir, 'src/fonts/css.njk'),
     svgs: path.join(dir, 'src/svgs/*.svg'),
     fontsOutput: path.join(dir, 'src/fonts/'),
     cssOutput: path.join(dir, 'src/fonts/font.css'),
