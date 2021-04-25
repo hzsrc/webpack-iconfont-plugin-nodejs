@@ -4,13 +4,14 @@ var fs = require('fs');
 var path = require('path');
 
 module.exports = function (fileMark, glyphDatas, options) {
-    let cssTemplateFile = options.template;
+    var cssTemplateFile = options.template;
+    var basePath = path.resolve('.', 'node_modules/webpack-iconfont-plugin-nodejs/src')
 
     if (!fs.existsSync(cssTemplateFile)) {
-        cssTemplateFile = path.resolve(__dirname, `templates/${options.template}.njk`);
+        cssTemplateFile = path.resolve(basePath, `templates/${options.template}.njk`);
     }
 
-    let htmlTemplateFile = path.resolve(__dirname, `templates/html.njk`);
+    let htmlTemplateFile = path.resolve(basePath, `templates/html.njk`);
 
     // options.cssOutput = path.resolve(options.cssOutput);
     if (options.htmlOutput === undefined) {
