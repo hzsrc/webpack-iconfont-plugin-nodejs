@@ -9,10 +9,10 @@ module.exports = function (fileMark, glyphDatas, options) {
 
     var basePath = path.resolve('.', 'node_modules/webpack-iconfont-plugin-nodejs/src')
 
-    if (!fs.existsSync(cssTemplateFile)) {
+    if (!cssTemplateFile || !fs.existsSync(cssTemplateFile)) {
         cssTemplateFile = path.resolve(basePath, `templates/${options.template}.njk`);
     }
-    if (!fs.existsSync(htmlTemplateFile)) {
+    if (!htmlTemplateFile || !fs.existsSync(htmlTemplateFile)) {
         htmlTemplateFile = path.resolve(basePath, `templates/html.njk`);
     }
 
