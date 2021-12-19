@@ -4,8 +4,8 @@ var fs = require('fs');
 var path = require('path');
 
 module.exports = function (fileMark, glyphDatas, options) {
-    var cssTemplateFile = options.template;
-    var htmlTemplateFile = options.HTMLtemplate;
+    var cssTemplateFile = options.template || 'css';
+    var htmlTemplateFile = options.htmlTemplate;
 
     var basePath = path.resolve('.', 'node_modules/webpack-iconfont-plugin-nodejs/src')
 

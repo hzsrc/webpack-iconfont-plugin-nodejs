@@ -40,6 +40,7 @@ var options = {
   cssPrefix: 'ico',
   svgs: path.join(dir, 'svgs/*.svg'),
   // template: path.join(dir, 'css.njk'),
+  // htmlTemplate: path.join(dir, 'html.njk'),
   fontsOutput: path.join(dir, 'fonts/'),
   cssOutput: path.join(dir, 'fonts/font.css'),
   htmlOutput: path.join(dir, 'fonts/_font-preview.html'),
@@ -110,7 +111,12 @@ Destination for generated html-preview file (file name). If `false`, no html and
 #### `template`
 Type: `String`    
 Default value: `css`    
-Type of built in style templates ('css', 'scss', 'scss-mixins') or path to custom template.
+Type of built in style templates ('css', 'scss', 'scss-mixins') or full path to custom template.
+
+#### `htmlTemplate`
+Type: `String`    
+Default value: `templates/html.njk` 
+Full path to custom html template.
 
 #### `formats`
 Type: `Array of String`     
