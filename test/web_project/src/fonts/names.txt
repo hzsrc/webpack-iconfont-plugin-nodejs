@@ -1,0 +1,8 @@
+bookmark
+calendar
+camera
+chat
+check
+state-beinvited
+success
+warning

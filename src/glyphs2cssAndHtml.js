@@ -25,7 +25,7 @@ module.exports = function (fileMark, glyphDatas, options) {
         options.htmlCssFile = path.relative(path.dirname(options.htmlOutput), options.cssOutput);
     }
     // css模板中的字体文件的相对路径
-    if(!options.cssFontPath) {
+    if (!options.cssFontPath) {
         options.cssFontPath = path.relative(path.dirname(options.cssOutput), options.fontsOutput);
     }
     if (options.cssFontPath !== '') {
@@ -66,6 +66,9 @@ module.exports = function (fileMark, glyphDatas, options) {
         }), null, 4)
         var prefix = options.jsPrefix || '/* eslint-disable */\n';
         cssHtml.js = prefix + 'export default ' + json + '\n'
+    }
+    if (options.namesOutput) {
+        cssHtml.names = glyphDatas.map(g => g.metadata.name).join('\n')
     }
 
     return cssHtml;

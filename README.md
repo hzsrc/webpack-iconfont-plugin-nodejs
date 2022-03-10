@@ -74,6 +74,7 @@ module.exports = {
           cssOutput: path.join(dir, 'fonts/font.css'),
           htmlOutput: path.join(dir, 'fonts/_font-preview.html'),
           jsOutput: path.join(dir, 'fonts/fonts.js'),
+          namesOutput: path.join(dir, 'fonts/names.txt'),
           // formats: ['ttf', 'woff', 'svg'],
         }),
     ]
@@ -134,6 +135,11 @@ Type: `String`
 Default value: undefined.    
 Path of a js file which contains all svg contents. Optional.
 
+#### `namesOutput`
+Type: `String`    
+Default value: undefined.    
+Path of a txt file which contains all icon names. c
+
 
 #### `jsPrefix`
 Type: `String`    
@@ -146,6 +152,10 @@ Type: `String`
 Default value: path.relative(path.dirname(options.cssOutput), options.fontsOutput);    
 Font url path in `cssOutput` file.
 
+#### `glyphTransformFn`
+Type: `Function`    
+Default value: undefined;    
+A function to modify glyphData.metadata. Optional.
 
 #### Other options for advanced
 Other options such as `startUnicode`, `prependUnicode` etc. in [defaultOptions.js](https://github.com/hzsrc/webpack-iconfont-plugin-nodejs/blob/master/src/defaultOptions.js),     

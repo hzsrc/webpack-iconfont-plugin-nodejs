@@ -4,11 +4,8 @@ var SVGIcons2SVGFontStream = require('svgicons2svgfont');
 module.exports = function svgIcons2svgFontFn(glyphDatas, options) {
     let svg = '';
     if (typeof options.glyphTransformFn === 'function') {
-        glyphDatas.map(glyphData => {
-            options.glyphTransformFn(
-                glyphData.metadata
-            );
-            return glyphData.metadata;
+        glyphDatas.forEach(glyphData => {
+            options.glyphTransformFn(glyphData.metadata);
         })
     }
     return new Promise((resolve, reject) => {

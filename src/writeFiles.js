@@ -20,6 +20,9 @@ module.exports = function (result) {
     if (options.jsOutput) {
         fnDatas[options.jsOutput] = result.js;
     }
+    if (options.namesOutput) {
+        fnDatas[options.namesOutput] = result.names;
+    }
     return Promise.all(
         Object.keys(fnDatas).map(fn => writeFile(fn, fnDatas[fn]))
     ).then(t => result)
