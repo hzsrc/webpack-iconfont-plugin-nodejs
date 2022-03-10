@@ -4,13 +4,13 @@ var fs = require('fs');
 var path = require('path');
 
 module.exports = function (fileMark, glyphDatas, options) {
-    var cssTemplateFile = options.template || 'css';
+    var cssTemplateFile = options.template;
     var htmlTemplateFile = options.htmlTemplate;
 
     var basePath = path.resolve('.', 'node_modules/webpack-iconfont-plugin-nodejs/src')
 
-    if (!cssTemplateFile || !fs.existsSync(cssTemplateFile)) {
-        cssTemplateFile = path.resolve(basePath, `templates/${options.template}.njk`);
+    if (!fs.existsSync(cssTemplateFile)) {
+        cssTemplateFile = path.resolve(basePath, `templates/${options.template || 'css'}.njk`);
     }
     if (!htmlTemplateFile || !fs.existsSync(htmlTemplateFile)) {
         htmlTemplateFile = path.resolve(basePath, `templates/html.njk`);
@@ -25,7 +25,7 @@ module.exports = function (fileMark, glyphDatas, options) {
         options.htmlCssFile = path.relative(path.dirname(options.htmlOutput), options.cssOutput);
     }
     // css模板中的字体文件的相对路径
-    if (!options.cssFontPath) {
+    if(!options.cssFontPath) {
         options.cssFontPath = path.relative(path.dirname(options.cssOutput), options.fontsOutput);
     }
     if (options.cssFontPath !== '') {

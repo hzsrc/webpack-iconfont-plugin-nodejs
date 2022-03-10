@@ -2,8 +2,8 @@ var path = require('path');
 var dir = 'test/web_project/'
 module.exports = {
     fontName: 'my-app-icon',
-     template: path.join(dir, '../../src/templates/css.njk'),
-    htmlTemplate: path.join(dir, '../../src/templates/css.njk'),
+    template: path.join('.', 'src/templates/css.njk'),
+    htmlTemplate: path.join('.', 'src/templates/html.njk'),
     svgs: path.join(dir, 'src/svgs/*.svg'),
     fontsOutput: path.join(dir, 'src/fonts/'),
     cssOutput: path.join(dir, 'src/fonts/font.css'),
