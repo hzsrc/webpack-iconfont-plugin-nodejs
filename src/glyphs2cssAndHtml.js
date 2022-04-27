@@ -7,7 +7,8 @@ module.exports = function (fileMark, glyphDatas, options) {
     var cssTemplateFile = options.template;
     var htmlTemplateFile = options.htmlTemplate;
 
-    var basePath = path.resolve('.', 'node_modules/webpack-iconfont-plugin-nodejs/src')
+    // var basePath = path.resolve('.', 'node_modules/webpack-iconfont-plugin-nodejs/src')
+    var basePath = __dirname
 
     if (!fs.existsSync(cssTemplateFile)) {
         cssTemplateFile = path.resolve(basePath, `templates/${options.template || 'css'}.njk`);
@@ -50,6 +51,7 @@ module.exports = function (fileMark, glyphDatas, options) {
         JSON.parse(JSON.stringify(options))
     );
 
+    nunjucks.configure(basePath);
     var cssHtml = {
         css: nunjucks.render(cssTemplateFile, nunjucksOptions),
     }
