@@ -63,7 +63,7 @@ module.exports = class IconfontPlugin {
             var dir = path.dirname(svgs[0]).replace('*.svg', '');
             if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) {
                 fs.watch(dir, (event, filename) => {
-                    if (filename.length > 4 && filename.slice(-4) === '.svg') {
+                    if (filename && filename.length > 4 && filename.slice(-4) === '.svg') {
                         comileDebounce()
                     }
                 });
