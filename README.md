@@ -157,6 +157,11 @@ Type: `Function`
 Default value: undefined;    
 A function to modify glyphData.metadata. Optional.
 
+#### `notWatchFile`
+Type: `boolean`    
+Default value: false;    
+Do not watch `svgs` files. Optional.
+
 #### Other options for advanced
 Other options such as `startUnicode`, `prependUnicode` etc. in [defaultOptions.js](https://github.com/hzsrc/webpack-iconfont-plugin-nodejs/blob/master/src/defaultOptions.js),     
 Please refer to:    

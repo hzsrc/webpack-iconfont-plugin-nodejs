@@ -33,7 +33,7 @@ module.exports = class IconfontPlugin {
         if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === undefined) {
             //this.getBinder(compiler, 'run')(this.compile);
             this.compile()
-            this.watch();
+            if (!this.options.notWatchFile) this.watch();
         }
     }
 
