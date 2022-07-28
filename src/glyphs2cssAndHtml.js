@@ -47,6 +47,7 @@ module.exports = function (fileMark, glyphDatas, options) {
                 return glyphData.metadata;
             })
         },
+        options
     );
 
     //nunjucks.configure(basePath);
