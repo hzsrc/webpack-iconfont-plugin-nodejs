@@ -75,7 +75,7 @@ module.exports = function (fileMark, glyphDatas, options) {
 }
 function render(file, options) {
     try{
-        var tpl = fs.readFileSync(file)
+        var tpl = fs.readFileSync(file, 'utf-8')
         return nunjucks.renderString(tpl, options)
     }
     catch (e) {
