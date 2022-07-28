@@ -47,15 +47,14 @@ module.exports = function (fileMark, glyphDatas, options) {
                 return glyphData.metadata;
             })
         },
-        JSON.parse(JSON.stringify(options))
     );
 
     //nunjucks.configure(basePath);
     var cssHtml = {
-        css: nunjucks.render(cssTemplateFile, nunjucksOptions),
+        css: render(cssTemplateFile, nunjucksOptions),
     }
     if (options.htmlOutput) {
-        cssHtml.html = nunjucks.render(htmlTemplateFile, nunjucksOptions)
+        cssHtml.html = render(htmlTemplateFile, nunjucksOptions)
     }
     if (options.jsOutput) {
         var json = JSON.stringify(glyphDatas.map(g => {
@@ -73,6 +72,15 @@ module.exports = function (fileMark, glyphDatas, options) {
     }
 
     return cssHtml;
+}
+function render(file, options) {
+    try{
+        var tpl = fs.readFileSync(file)
+        return nunjucks.renderString(tpl, options)
+    }
+    catch (e) {
+        console.error(e)
+    }
 }
 
 /*
