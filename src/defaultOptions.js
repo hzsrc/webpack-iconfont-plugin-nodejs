@@ -24,7 +24,7 @@ module.exports = {
     normalize: true,
     prependUnicode: false,
     round: 10e12,
-    startUnicode: 0xEA01,
+    startUnicode: 0x554a,
     template: 'css',
     verbose: false
 }
