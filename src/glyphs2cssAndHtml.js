@@ -25,7 +25,7 @@ module.exports = function (fileMark, glyphDatas, options) {
         options.htmlCssFile = path.relative(path.dirname(options.htmlOutput), options.cssOutput);
     }
     // css模板中的字体文件的相对路径
-    if(!options.cssFontPath) {
+    if (!options.cssFontPath) {
         options.cssFontPath = path.relative(path.dirname(options.cssOutput), options.fontsOutput);
     }
     if (options.cssFontPath !== '') {
@@ -47,7 +47,7 @@ module.exports = function (fileMark, glyphDatas, options) {
                 return glyphData.metadata;
             })
         },
-        options
+        JSON.parse(JSON.stringify(options)) // deep clone
     );
 
     //nunjucks.configure(basePath);
@@ -74,12 +74,12 @@ module.exports = function (fileMark, glyphDatas, options) {
 
     return cssHtml;
 }
+
 function render(file, options) {
-    try{
+    try {
         var tpl = fs.readFileSync(file, 'utf-8')
         return nunjucks.renderString(tpl, options)
-    }
-    catch (e) {
+    } catch (e) {
         console.error(e)
     }
 }
