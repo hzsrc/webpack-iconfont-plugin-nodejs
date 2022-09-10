@@ -1,6 +1,6 @@
 {
   "name": "webpack-iconfont-plugin-nodejs",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "Use svg files to build iconfont files(ttf,woff2,woff,eot,svg), css file, js data file and html preview file.",
   "license": "MIT",
   "repository": {
@@ -10,7 +10,8 @@
   "scripts": {
     "build": "node test/web_project/build/build.js",
     "dev": "node test/web_project/build/dev-server.js",
-    "build-font": "node test/nodejs_project/run.js"
+    "build-font": "node test/nodejs_project/run.js",
+    "test": "node test/test.js"
   },
   "keywords": [
     "icons",

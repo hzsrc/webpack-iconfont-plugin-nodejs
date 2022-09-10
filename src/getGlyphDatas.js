@@ -8,21 +8,27 @@ module.exports = function getGlyphDatas(files, options) {
     const throttle = createThrottle(options.maxConcurrency);
 
     //并发执行的，顺序会不确定。先定好顺序
-    var orderedFiles = files.sort((f1, f2) => f1 > f2 ? 1 : -1);
+    var orderedFiles = files.sort((f1, f2) => f1 < f2 ? -1 : 1);
 
     return Promise.all(
-        orderedFiles.map((srcPath, index) => {
+        orderedFiles.map((fileOrData, index) => {
             return throttle(() => {
                 return new Promise((resolve, reject) => {
-                    let glyphContents = '';
+                    if (fileOrData.svgContent) {
+                        //传入的不是文件路径，而直接是svg数据: {svgContent, fileName}
+                        resolve({ contents: fileOrData.svgContent, srcPath: fileOrData.fileName })
+                        return
+                    }
 
-                    fs.createReadStream(srcPath).on('error', glyphError => reject(glyphError))
+                    let glyphContents = '';
+                    fs.createReadStream(fileOrData)
+                        .on('error', glyphError => reject(glyphError))
                         .on('data', data => {
                             glyphContents += data.toString();
                         })
                         .on('end', () => {
                             if (glyphContents.length === 0) {
-                                reject(new Error(`Empty file ${srcPath}`));
+                                reject(new Error(`Empty file ${fileOrData}`));
                                 return
                             }
 
@@ -30,11 +36,7 @@ module.exports = function getGlyphDatas(files, options) {
                             //     if (error) {
                             //         return reject(error);
                             //     }
-                            const glyphData = {
-                                contents: glyphContents,
-                                srcPath
-                            };
-
+                            const glyphData = { contents: glyphContents, srcPath: fileOrData };
                             resolve(glyphData);
                             // });
                         });

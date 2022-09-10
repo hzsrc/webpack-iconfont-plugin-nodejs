@@ -1,4 +1,4 @@
-const nodify = require('nodeify');
+const nodeify = require('nodeify');
 const path = require('path');
 const fs = require('fs');
 const generate = require('./generate')
@@ -38,7 +38,7 @@ module.exports = class IconfontPlugin {
     }
 
     build(callback) {
-        return nodify(
+        return nodeify(
             generate.byGlobby(this.options)
                 .then(result => writeFiles(result))
                 .then(ret => {
@@ -46,7 +46,7 @@ module.exports = class IconfontPlugin {
                     return ret
                 })
                 .catch(console.error.bind(console)),
-            error => callback && callback(error)
+            (error, ret) => callback && callback(error, ret)
         );
     }
 
@@ -58,6 +58,7 @@ module.exports = class IconfontPlugin {
         var comileDebounce = thro_debs.debounce(800, this.build.bind(this));
         var svgs = [].concat(this.options.svgs);
 
+        if (svgs[0] && typeof svgs[0] !== 'string') return;
         // 只有一个文件夹时，监视文件夹。支持新增。/ab/c/*.svg
         if (svgs.length === 1) {
             var dir = path.dirname(svgs[0]).replace('*.svg', '');

@@ -7,13 +7,17 @@ var svgFont2otherFonts = require('./svgFont2otherFonts')
 var glyphs2cssAndHtml = require('./glyphs2cssAndHtml')
 
 exports.byGlobby = function (userOptions) {
-    return globbyFiles(userOptions.svgs)
+    var svgs = userOptions.svgs;
+    if (svgs[0] && svgs[0].svgContent) {
+        return exports.byFilesOrDatas(svgs, userOptions)
+    }
+    return globbyFiles(svgs)
         .then(foundFiles => {
-            return exports.byFiles(foundFiles, userOptions)
+            return exports.byFilesOrDatas(foundFiles, userOptions)
         })
 }
 
-exports.byFiles = function (inputSvgFiles, userOptions) {
+exports.byFilesOrDatas = function (inputSvgFiles, userOptions) {
     let options = Object.assign({}, defaultOptions, userOptions);
     return getGlyphDatas(inputSvgFiles, options)
         .then(glyphDatas => {
@@ -43,7 +47,7 @@ exports.byGlyphDatas = function (glyphDatas, userOptions) {
             cssPrefix: userOptions.cssPrefix || userOptions.fontName
         }
     );
-    var result = {options};
+    var result = { options };
 
     result.glyphDatas = glyphDatas;
     return glyphs2svgFont(glyphDatas, options)

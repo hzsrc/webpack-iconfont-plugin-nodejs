@@ -85,8 +85,21 @@ module.exports = {
 ## Options
 
 #### `svgs` (required)
-Type: `String`    
-File path(s) or glob(s) to svg icons. Recommend to use *.svg like this: /src/project/src/*.svg, this can watch svgs by directory.
+Type: `String` | `[String]` | `[{ fileName:String, svgContent:String }, ...]`   
+File path(s) or glob(s) to svg icons. Recommend to use *.svg like this: `svgs: '/src/project/src/*.svg'`, this can watch svgs by a directory.  
+
+Or array of svg-data with `fileName`(must be *.svg) and `svgContent` like this:
+```js
+svgs: [
+    {
+        fileName: 'my-svg1.svg',
+        svgContent: '<svg xmlns="http://www.w3.org/2000/svg">......</svg>'
+    },{
+        fileName: 'mySvg2.svg',
+        svgContent: '<svg xmlns="http://www.w3.org/2000/svg">......></svg>'
+    }
+]
+```
 
 
 #### `fontsOutput` (required)
