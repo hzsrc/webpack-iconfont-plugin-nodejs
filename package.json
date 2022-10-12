@@ -29,7 +29,7 @@
     "globby": "^8.0.1",
     "nodeify": "^1.0.1",
     "nunjucks": "^3.2.3",
-    "svg2ttf": "^5.2.0",
+    "svg2ttf": "^6.0.3",
     "svgicons2svgfont": "^9.1.1",
     "thro-debs": "^1.0.7",
     "ttf2eot": "^2.0.0  ",
