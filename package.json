@@ -1,6 +1,6 @@
 {
   "name": "webpack-iconfont-plugin-nodejs",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "description": "Use svg files to build iconfont files(ttf,woff2,woff,eot,svg), css file, js data file and html preview file.",
   "license": "MIT",
   "repository": {
@@ -31,8 +31,8 @@
     "svg2ttf": "^6.0.3",
     "svgicons2svgfont": "^12.0.0",
     "thro-debs": "^1.0.7",
-    "ttf2eot": "^3.1.0",
-    "ttf2woff": "^3.0.0",
+    "ttf2eot": "^2.0.0",
+    "ttf2woff": "^2.0.2",
     "ttf2woff2-no-gyp": "^4.0.6"
   },
   "devDependencies": {
