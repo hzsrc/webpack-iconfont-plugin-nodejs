@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "copy-webpack-plugin": "^8.1.0",
-    "css-loader": "^2.0.0",
+    "css-loader": "^6.8.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.16.4",
     "file-loader": "^2.0.0",
