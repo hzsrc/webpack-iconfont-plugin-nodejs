@@ -59,27 +59,16 @@ module.exports = class IconfontPlugin {
         var svgs = [].concat(this.options.svgs);
 
         if (svgs[0] && typeof svgs[0] !== 'string') return;
-        // 只有一个文件夹时，监视文件夹。支持新增。/ab/c/*.svg 或 /ab/c/**/*.svg
-        if (svgs.length === 1) {
-            var dir = path.dirname(svgs[0]).replace('*.svg', '').replace('**/', '');
+        // 监视文件夹。支持svg新增。/ab/c/*.svg 或 /ab/c/**/*.svg
+        svgs.map(svg => {
+            var dir = path.dirname(svg).replace(/\/\*\*/g, '');
             if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) {
                 fs.watch(dir, (event, filename) => {
                     if (filename && filename.length > 4 && filename.slice(-4) === '.svg') {
                         comileDebounce()
                     }
                 });
-                return
             }
-        }
-
-        // 监视每个文件。/ab/c/**/*.svg
-        globby(svgs).then(files => {
-            files.map(file => {
-                fs.watch(file, (event, filename) => {
-                    comileDebounce()
-                })
-            })
         })
     }
-
 }
