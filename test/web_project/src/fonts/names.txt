@@ -6,3 +6,4 @@ check
 state-beinvited
 success
 warning
+pwd_msk

@@ -171,12 +171,23 @@ Default value: undefined;
 A function to modify glyphData.metadata. Optional.
 
 #### `notWatchFile`
-Type: `boolean`    
-Default value: false;    
+Type: `Boolean`    
+Default value: `false`;    
 Do not watch `svgs` files. Optional.
 
+#### `maskPwd`
+Type: `Boolean`    
+Default value: `false`;  use `true` to generate ascii chars font as a black dot.    
+If you use `<input type="password"/>`, the browser will show a dialog to ask user for saving password. This will take security issues because the saved passwords can be decrypted.    
+To prevent this happening, you can use `<input type="text" style="font-family:'my-app-icon'"/>`, and it can show all the ascii chars as black dots.
+
+
 #### Other options for advanced
-Other options such as `startUnicode`, `prependUnicode` etc. in [defaultOptions.js](https://github.com/hzsrc/webpack-iconfont-plugin-nodejs/blob/master/src/defaultOptions.js),     
+startUnicode: specify start char unicode, default is 0x554a.    
+descent: it is useful for vertical align, default is 0.    
+
+Other options such as `startUnicode`, `prependUnicode` etc. in [defaultOptions.js](https://github.com/hzsrc/webpack-iconfont-plugin-nodejs/blob/master/src/defaultOptions.js).     
+
 Please refer to:    
 https://www.npmjs.com/package/svgicons2svgfont    
 https://www.npmjs.com/package/svg2ttf    

@@ -40,6 +40,14 @@
     font-style: normal;
 }
 
+.pw-msk, .pw-msk input[type=text] {
+    font-family: '{{ fontName }}';
+}
+
+.pw-msk::placeholder, .pw-msk input[type=text]::placeholder {
+    font-family: initial;
+}
+
 [class^="{{ cssPrefix }}"], [class*=" {{ cssPrefix }}"] {
     font-family: '{{ fontName }}' !important;
     -webkit-font-smoothing: antialiased;

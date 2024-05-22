@@ -3,3 +3,5 @@ dist
 test
 .idea
 .DS_Store
+.npmrc
+push.bat

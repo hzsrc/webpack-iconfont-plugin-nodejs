@@ -31,6 +31,294 @@
     <glyph glyph-name="warning"
       unicode="&#x5551;"
       horiz-adv-x="1000" d="M500 1000C223.84375 1000 0 776.15625 0 500S223.84375 0 500 0V0C776.15625 0 1000 223.84375 1000 500S776.15625 1000 500 1000V1000zM557.5 850L535 337.5H457.5L432.5 850H557.5zM547.5 160C532.5 147.4375 515 140.0625 495 140.0625S459.9999999999999 144.90625 445 160C431.1875 171.625 422.46875 188.9375 422.46875 208.28125C422.46875 208.8749999999999 422.46875 209.4375 422.5 210.03125V209.9375C422.5 230 430 247.4375 445 260C457.59375 272.34375 474.875 279.9375000000001 493.9375000000001 279.9375000000001C494.3125000000001 279.9375000000001 494.6875 279.9375000000001 495.0625 279.9375000000001H495C517.5 279.9375000000001 535 272.4375000000001 547.5 262.5000000000001C559.9999999999999 249.9375 567.5 235.0000000000001 567.5 212.4375C567.5 192.5 560 172.5937500000001 547.5 160z" />
+    <glyph glyph-name="pwd_msk"
+      unicode="&#x7F;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-1"
+      unicode="&#x7E;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-2"
+      unicode="&#x7D;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-3"
+      unicode="&#x7C;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-4"
+      unicode="&#x7B;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-5"
+      unicode="&#x7A;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-6"
+      unicode="&#x79;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-7"
+      unicode="&#x78;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-8"
+      unicode="&#x77;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-9"
+      unicode="&#x76;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-10"
+      unicode="&#x75;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-11"
+      unicode="&#x74;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-12"
+      unicode="&#x73;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-13"
+      unicode="&#x72;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-14"
+      unicode="&#x71;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-15"
+      unicode="&#x70;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-16"
+      unicode="&#x6F;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-17"
+      unicode="&#x6E;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-18"
+      unicode="&#x6D;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-19"
+      unicode="&#x6C;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-20"
+      unicode="&#x6B;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-21"
+      unicode="&#x6A;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-22"
+      unicode="&#x69;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-23"
+      unicode="&#x68;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-24"
+      unicode="&#x67;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-25"
+      unicode="&#x66;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-26"
+      unicode="&#x65;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-27"
+      unicode="&#x64;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-28"
+      unicode="&#x63;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-29"
+      unicode="&#x62;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-30"
+      unicode="&#x61;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-31"
+      unicode="&#x60;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-32"
+      unicode="&#x5F;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-33"
+      unicode="&#x5E;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-34"
+      unicode="&#x5D;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-35"
+      unicode="&#x5C;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-36"
+      unicode="&#x5B;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-37"
+      unicode="&#x5A;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-38"
+      unicode="&#x59;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-39"
+      unicode="&#x58;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-40"
+      unicode="&#x57;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-41"
+      unicode="&#x56;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-42"
+      unicode="&#x55;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-43"
+      unicode="&#x54;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-44"
+      unicode="&#x53;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-45"
+      unicode="&#x52;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-46"
+      unicode="&#x51;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-47"
+      unicode="&#x50;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-48"
+      unicode="&#x4F;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-49"
+      unicode="&#x4E;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-50"
+      unicode="&#x4D;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-51"
+      unicode="&#x4C;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-52"
+      unicode="&#x4B;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-53"
+      unicode="&#x4A;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-54"
+      unicode="&#x49;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-55"
+      unicode="&#x48;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-56"
+      unicode="&#x47;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-57"
+      unicode="&#x46;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-58"
+      unicode="&#x45;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-59"
+      unicode="&#x44;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-60"
+      unicode="&#x43;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-61"
+      unicode="&#x42;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-62"
+      unicode="&#x41;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-63"
+      unicode="&#x40;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-64"
+      unicode="&#x3F;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-65"
+      unicode="&#x3E;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-66"
+      unicode="&#x3D;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-67"
+      unicode="&#x3C;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-68"
+      unicode="&#x3B;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-69"
+      unicode="&#x3A;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-70"
+      unicode="&#x39;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-71"
+      unicode="&#x38;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-72"
+      unicode="&#x37;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-73"
+      unicode="&#x36;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-74"
+      unicode="&#x35;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-75"
+      unicode="&#x34;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-76"
+      unicode="&#x33;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-77"
+      unicode="&#x32;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-78"
+      unicode="&#x31;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-79"
+      unicode="&#x30;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-80"
+      unicode="&#x2F;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-81"
+      unicode="&#x2E;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-82"
+      unicode="&#x2D;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-83"
+      unicode="&#x2C;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-84"
+      unicode="&#x2B;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-85"
+      unicode="&#x2A;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-86"
+      unicode="&#x29;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-87"
+      unicode="&#x28;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-88"
+      unicode="&#x27;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-89"
+      unicode="&#x26;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-90"
+      unicode="&#x25;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-91"
+      unicode="&#x24;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-92"
+      unicode="&#x23;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-93"
+      unicode="&#x22;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-94"
+      unicode="&#x21;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
+    <glyph glyph-name="pwd_msk-95"
+      unicode="&#x20;"
+      horiz-adv-x="437.5" d="M62.5 500A156.25 156.25 0 0 1 375 500A156.25 156.25 0 0 1 62.5 500" />
   </font>
 </defs>
 </svg>

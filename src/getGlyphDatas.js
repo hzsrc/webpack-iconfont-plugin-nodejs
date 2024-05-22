@@ -58,5 +58,27 @@ module.exports = function getGlyphDatas(files, options) {
                 })
             )
         })
-    );
+    ).then(datas => {
+        addPwdMask(datas)
+        return datas
+    });
+
+    function addPwdMask(datas) {
+        if (options.maskPwd) {
+            var cs = []
+            for (var i = 127; i >= 32; i--) {
+                cs.push(String.fromCharCode(i))
+            }
+            datas.push({
+                contents: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 64" width="28" height="64"><ellipse ry="10" rx="10" cy="32" cx="14" fill="#000" stroke-width="0"/></svg>',
+                srcPath: 'pwd_msk.svg',
+                metadata: {
+                    path: 'pwd_msk.svg',
+                    name: 'pwd_msk',
+                    unicode: cs,
+                    renamed: false
+                }
+            })
+        }
+    }
 }

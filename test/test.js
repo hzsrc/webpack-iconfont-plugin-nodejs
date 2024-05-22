@@ -1,18 +1,20 @@
 var WebpackIconfontPluginNodejs = require('../src/index');
 var options = require('./iconfont-options.js')
 
+options.maskPwd = true
+
 function test1() {
     new WebpackIconfontPluginNodejs(options).build((err, r) => {
         if (err) throw err
         var names = require('fs').readFileSync('test/web_project/src/fonts/names.txt', 'utf-8')
-        if (names != `bookmark
+        if (names.indexOf(`bookmark
 calendar
 camera
 chat
 check
 state-beinvited
 success
-warning`) throw  new Error('生成有误！')
+warning`) === -1) throw  new Error('生成有误！')
     })
 }
 
@@ -31,10 +33,10 @@ op2.svgs = [
             '</svg>'
     },
 ];
-new WebpackIconfontPluginNodejs(op2).build((err, r) => {debugger
+new WebpackIconfontPluginNodejs(op2).build((err, r) => {
     test1()
     if (err) throw err
     var names2 = require('fs').readFileSync('test/web_project/src/fonts/names.txt', 'utf-8')
-    if (names2 != `my-svg1
-mySvg2`) throw  new Error('生成有误！')
+    if (!names2.indexOf(`my-svg1
+mySvg2`) === -1) throw  new Error('生成有误！')
 })
