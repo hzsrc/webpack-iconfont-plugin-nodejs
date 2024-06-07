@@ -48,7 +48,7 @@
     font-family: initial;
 }
 
-[class^="{{ cssPrefix }}"], [class*=" {{ cssPrefix }}"] {
+[class^="{{ cssPrefix }}"]::before, [class*=" {{ cssPrefix }}"]::before {
     font-family: '{{ fontName }}' !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
