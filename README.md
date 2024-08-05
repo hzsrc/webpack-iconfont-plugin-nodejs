@@ -181,6 +181,11 @@ Default value: `false`;  use `true` to generate ascii chars font as a black dot.
 If you use `<input type="password"/>`, the browser will show a dialog to ask user for saving password. This will take security issues because the saved passwords can be decrypted.    
 To prevent this happening, you can use `<input type="text" style="font-family:'my-app-icon'"/>`, and it can show all the ascii chars as black dots.
 
+#### `keepUnicode`
+Type: `Boolean`    
+Default value: `false`;  use `true` to keep the unicode for each icon. It means that when you add new icons, the old icons will keep their same unicode.    
+This depends on the `jsOutput` option.    
+
 
 #### Other options for advanced
 startUnicode: specify start char unicode, default is 0x554a.    

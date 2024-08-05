@@ -59,9 +59,56 @@ module.exports = function getGlyphDatas(files, options) {
             )
         })
     ).then(datas => {
+        useOldUnicode(datas)
         addPwdMask(datas)
         return datas
     });
+
+    //做到与先前的unicode保持一致
+    function useOldUnicode(datas) {
+        var keepUnicode = options.keepUnicode
+        var codeMap, curCode = options.startUnicode
+        if (keepUnicode) {
+            if (!options.jsOutput) {
+                console.warn('`keepUnicode=true` need `jsOutput` to be set')
+                return
+            }
+            try {
+                var txt = fs.readFileSync(options.jsOutput, 'utf-8')
+                var json = txt.substr(txt.indexOf('['))
+                var fonts = JSON.parse(json)
+                if (fonts[0]) {
+                    codeMap = {}
+                    if (!curCode) curCode = parseInt(fonts[0].unicode, 16)
+                    fonts.map(font => codeMap[font.name] = font.unicode)
+                }
+            } catch (e) {
+                console.warn(e)
+            }
+        }
+        if (codeMap) {
+            var used = {}
+            var toBeSet = [] //新增的图标，需重置unicode
+            datas.map(data => {
+                var meta = data.metadata
+                var unicode = codeMap[meta.name]
+                if (unicode) {
+                    unicode = parseInt(unicode, 16)
+                    meta.unicode[0] = String.fromCodePoint(unicode)
+                    used[unicode] = 1
+                } else {
+                    toBeSet.push(meta)
+                }
+            })
+            toBeSet.map(meta => {
+                while (used[curCode]) {
+                    curCode++
+                }
+                meta.unicode[0] = String.fromCodePoint(curCode)
+                curCode++
+            })
+        }
+    }
 
     function addPwdMask(datas) {
         if (options.maskPwd) {

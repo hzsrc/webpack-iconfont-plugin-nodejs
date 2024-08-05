@@ -12,5 +12,6 @@ module.exports = {
     namesOutput: path.join(dir, 'src/fonts/names.txt'),
     htmlOutput: path.join(dir, 'src/fonts/font-preview.html'),
     //formats: ['ttf', 'woff2', 'woff', 'svg'],
-    cssPrefix: 'my-icon'
+    cssPrefix: 'my-icon',
+    keepUnicode: true,
 };

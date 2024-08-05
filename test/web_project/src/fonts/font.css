@@ -13,15 +13,11 @@
     font-family: 'my-app-icon';
 }
 
-.pw-msk ::placeholder {
+.pw-msk::placeholder, .pw-msk input[type=text]::placeholder {
     font-family: initial;
 }
 
-.pw-msk ::-moz-placeholder{
-     font-family: initial;
- }
-
-[class^="my-icon"], [class*=" my-icon"] {
+[class^="my-icon"]::before, [class*=" my-icon"]::before {
     font-family: 'my-app-icon' !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

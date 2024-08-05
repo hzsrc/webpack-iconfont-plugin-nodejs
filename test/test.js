@@ -19,6 +19,7 @@ warning`) === -1) throw  new Error('生成有误！')
 }
 
 var op2 = Object.assign({}, options)
+op2.jsOutput = op2.jsOutput + '2.js'
 op2.svgs = [
     {
         fileName: 'my-svg1.svg',
@@ -33,6 +34,7 @@ op2.svgs = [
             '</svg>'
     },
 ];
+
 new WebpackIconfontPluginNodejs(op2).build((err, r) => {
     test1()
     if (err) throw err
