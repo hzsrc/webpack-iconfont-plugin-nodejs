@@ -49,6 +49,9 @@ var options = {
 };
 
 new WebpackIconfontPluginNodejs(options).build()
+
+//Also can use by an array:
+//new WebpackIconfontPluginNodejs([options1, options2]).build()
 ```
 
 Then you can run this command to build iconfont by svg:
