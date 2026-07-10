@@ -1,5 +1,5 @@
 var WebpackIconfontPluginNodejs = require('../src/index');
-var options = require('./iconfont-options.js')
+var options = require('./iconfont-options.js')[0]
 
 options.maskPwd = true
 

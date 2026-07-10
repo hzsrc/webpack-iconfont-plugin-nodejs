@@ -2,7 +2,6 @@ var os = require('os');
 module.exports = {
     ascent: undefined,
     centerHorizontally: true,
-    descent: 0,
     fixedWidth: false,
     fontId: null,
     fontName: 'iconfont',
@@ -13,15 +12,17 @@ module.exports = {
         ttf: {
             copyright: null,
             ts: null,
-            version: null
+            version: null,
         }
     },
     glyphTransformFn: null,
     maxConcurrency: os.cpus().length,
     metadata: null,
     metadataProvider: null,
-    fontHeight: 1000, // 这个与normalize配合解决精确度问题
+    fontHeight: 1024, // 这个与normalize配合解决精确度问题, 即units-per-em（UPM）
+    descent: 212,     // 基线向下下沉空间，正数，812=1024-212
     normalize: true,
+    centerVertically: true,
     prependUnicode: false,
     round: 10e12,
     startUnicode: 0x554a,

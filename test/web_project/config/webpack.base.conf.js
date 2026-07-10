@@ -1,6 +1,6 @@
 var path = require('path');
 var WebpackIconfontPluginNodejs = require('../../../src/index.js');
-var options = require('../../iconfont-options.js');
+var options = require('../../iconfont-options.js')[0];
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+   version="1.1"
+   width="18"
+   height="32"
+   viewBox="0 0 18 32"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <path
+     d="M 11.3,25.6 V 20.48 H 2.24 V 17.856 L 11.3,2.24 h 2.88 L 5.12,17.856 v 0 H 11.3 V 2.24 h 2.88 v 15.616 h 1.5 v 2.624 h -1.5 v 5.12 z"
+     id="path1" />
+</svg>

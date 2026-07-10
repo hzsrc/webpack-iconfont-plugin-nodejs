@@ -1,9 +1,3 @@
-bookmark
-calendar
-camera
-chat
-check
-state-beinvited
-success
-warning
+my-svg1
+mySvg2
 pwd_msk
