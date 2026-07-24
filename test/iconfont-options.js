@@ -27,7 +27,7 @@ module.exports = [{
     formats: ['ttf', 'woff2', 'svg'],
     cssPrefix: 'my-icon',
     keepUnicode: true,
-    ascent: 819, //基线（baseline=0）往上的高度，正数
+    ascent: 1174, //基线（baseline=0）往上的高度，正数
     //descent:-205, //基线往下的高度，必须是负数
 }, {
     fontName: 'num-mono-ex-lt',
@@ -42,6 +42,6 @@ module.exports = [{
     formats: ['ttf', 'woff2', 'svg'],
     cssPrefix: 'my-icon',
     keepUnicode: true,
-    ascent: 819, //基线（baseline=0）往上的高度，正数
+    ascent: 1174, //基线（baseline=0）往上的高度，正数
     // descent:10, //基线往下的高度，必须是负数
 }];
