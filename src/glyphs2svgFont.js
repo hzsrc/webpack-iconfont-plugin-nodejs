@@ -9,9 +9,11 @@ module.exports = function svgIcons2svgFontFn(glyphDatas, options) {
         })
     }
     return new Promise((resolve, reject) => {
+        //参考：https://github.com/nfroidure/svgicons2svgfont
         const fontStream = new SVGIcons2SVGFontStream({
             ascent: options.ascent,
             centerHorizontally: options.centerHorizontally,
+            centerVertically: options.centerVertically,
             descent: options.descent,
             fixedWidth: options.fixedWidth,
             fontHeight: options.fontHeight,

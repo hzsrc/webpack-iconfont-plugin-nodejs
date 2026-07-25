@@ -96,10 +96,10 @@ Or array of svg-data with `fileName`(must be *.svg) and `svgContent` like this:
 svgs: [
     {
         fileName: 'my-svg1.svg',
-        svgContent: '<svg xmlns="http://www.w3.org/2000/svg">......</svg>'
+        svgContent: '<svg>......</svg>'
     },{
         fileName: 'mySvg2.svg',
-        svgContent: '<svg xmlns="http://www.w3.org/2000/svg">......></svg>'
+        svgContent: '<svg>......></svg>'
     }
 ]
 ```
@@ -196,7 +196,7 @@ descent: it is useful for vertical align, default is 0.
 
 Other options such as `startUnicode`, `prependUnicode` etc. in [defaultOptions.js](https://github.com/hzsrc/webpack-iconfont-plugin-nodejs/blob/master/src/defaultOptions.js).     
 
-Please refer to:    
+Please refer to:
 https://www.npmjs.com/package/svgicons2svgfont    
 https://www.npmjs.com/package/svg2ttf    
 https://www.npmjs.com/package/ttf2eot    

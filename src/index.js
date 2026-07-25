@@ -4,7 +4,6 @@ const fs = require('fs');
 const generate = require('./generate')
 const writeFiles = require('./writeFiles')
 var thro_debs = require('thro-debs')
-var globby = require('globby');
 
 module.exports = class IconfontPlugin {
     constructor(optionsOrList = {}) {
@@ -45,16 +44,17 @@ module.exports = class IconfontPlugin {
     }
 
     build(callback) {
-        return nodeify(Promise.all(this.optionsArr.map(options => {
-                return generate.byGlobby(options)
-                    .then(result => writeFiles(result))
-                    .then(ret => {
-                        console.log('Font+css have been built with ' + ret.glyphDatas.length + ' svg-icons.');
-                        return ret
-                    })
-                    .catch(console.error.bind(console)),
-                    (error, ret) => callback && callback(error, ret)
-            }))
+        var allTasks = this.optionsArr.map(options => {
+            return generate.byGlobby(options)
+                .then(result => writeFiles(result))
+                .then(ret => {
+                    console.log('Font+css have been built with ' + ret.glyphDatas.length + ' svg-icons.');
+                    return ret
+                })
+                .catch(console.error.bind(console))
+        })
+        return nodeify(Promise.all(allTasks),
+            (error, ret) => callback && callback(error, ret)
         );
     }
 

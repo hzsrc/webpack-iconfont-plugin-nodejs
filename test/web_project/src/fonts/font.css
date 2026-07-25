@@ -1,10 +1,10 @@
 @font-face {
     font-family: my-app-icon;
-    src: url("my-app-icon.eot");src: url("my-app-icon.eot?16ed2f65#iefix") format("embedded-opentype"),
-             url("my-app-icon.woff2?16ed2f65") format("woff2"),
-             url("my-app-icon.woff?16ed2f65") format("woff"),
-             url("my-app-icon.ttf?16ed2f65") format("truetype"),
-             url("my-app-icon.svg?16ed2f65#my-app-icon") format("svg");
+    src: url("my-app-icon.eot");src: url("my-app-icon.eot?b468f8be#iefix") format("embedded-opentype"),
+             url("my-app-icon.woff2?b468f8be") format("woff2"),
+             url("my-app-icon.woff?b468f8be") format("woff"),
+             url("my-app-icon.ttf?b468f8be") format("truetype"),
+             url("my-app-icon.svg?b468f8be#my-app-icon") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -25,15 +25,35 @@
 }
 
 
-.my-icon-my-svg1::before {
+.my-icon-bookmark::before {
     content: "\554a";
 }
 
-.my-icon-mySvg2::before {
+.my-icon-calendar::before {
     content: "\554b";
 }
 
-.my-icon-pwd_msk::before {
-    content: "\7f";
+.my-icon-camera::before {
+    content: "\554c";
+}
+
+.my-icon-chat::before {
+    content: "\554d";
+}
+
+.my-icon-check::before {
+    content: "\554e";
+}
+
+.my-icon-state-beinvited::before {
+    content: "\554f";
+}
+
+.my-icon-success::before {
+    content: "\5550";
+}
+
+.my-icon-warning::before {
+    content: "\5551";
 }
 

@@ -1,3 +1,5 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="36" viewBox="0 0 18 36">
+<svg version="1.1" width="18" height="36" viewBox="0 0 18 36" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0,0), scale(1,1.2)">
 <path d="M8.544 22.464v-6.528h-6.272v-1.888h6.272v-6.528h2.112v6.528h6.272v1.888h-6.272v6.528h-2.112z"></path>
+  </g>
 </svg>
