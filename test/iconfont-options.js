@@ -1,6 +1,6 @@
 var path = require('path').posix;
 var dir = path.join(__dirname, 'web_project');
-const descent = 200
+const descent = 180
 module.exports = [{
     fontName: 'my-app-icon',
     template: 'css',
@@ -28,7 +28,6 @@ module.exports = [{
     cssPrefix: 'my-icon',
     keepUnicode: true,
     descent, //基线往下的高度, 正数
-    ascent: 1024- descent,
 }, {
     fontName: 'num-mono-ex-lt',
     template: 'css',
@@ -43,5 +42,4 @@ module.exports = [{
     cssPrefix: 'my-icon',
     keepUnicode: true,
     descent, //基线往下的高度, 正数
-    ascent: 1024- descent,
 }];

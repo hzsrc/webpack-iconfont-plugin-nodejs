@@ -49,10 +49,15 @@
 }
 
 [class^="{{ cssPrefix }}"]::before, [class*=" {{ cssPrefix }}"]::before {
-    font-family: '{{ fontName }}';
+    font-family: '{{ fontName }}' !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-style: normal;
+}
+
+[class^="{{ cssPrefix }}"], [class*=" {{ cssPrefix }}"] {
+    display: inline-flex;
+    align-items: center;
 }
 
 {% for glyph in glyphs %}

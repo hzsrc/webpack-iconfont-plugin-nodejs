@@ -55,6 +55,11 @@
     font-style: normal;
 }
 
+[class^="{{ cssPrefix }}"], [class*=" {{ cssPrefix }}"] {
+    display: inline-flex;
+    align-items: center;
+}
+
 {% for glyph in glyphs %}
 .{{ cssPrefix }}-{{ glyph.name }}::before {
     content: "\{{ glyph.unicode[0].charCodeAt(0).toString(16) }}";
