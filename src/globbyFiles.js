@@ -1,4 +1,4 @@
-var globby = require('globby');
+var globby = require('tinyglobby').glob;
 var path = require('path');
 
 module.exports = function (svgsGlobbyOrFileNames) {
