@@ -16,14 +16,19 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                // ✅ loaders 改成 use
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: 'font/[name]-[hash:8].[ext]'
+                type: 'asset',
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 10000 // 小于10kb内联，大于输出文件，等价 url-loader limit
+                    }
+                },
+                generator: {
+                    filename: 'font/[name]-[hash:8].[ext]'
                 }
             }
         ]

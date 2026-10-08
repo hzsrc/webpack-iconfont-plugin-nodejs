@@ -22,7 +22,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-style: normal;
-    vertical-align: top;
+}
+
+[class^="my-icon"], [class*=" my-icon"] {
+    display: inline-flex;
+    align-items: center;
 }
 
 

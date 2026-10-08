@@ -1,6 +1,6 @@
 {
   "name": "webpack-iconfont-plugin-nodejs",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Use svg files to build iconfont files(ttf,woff2,woff,eot,svg), css file, js data file and html preview file.",
   "license": "MIT",
   "repository": {
@@ -23,9 +23,12 @@
     "plugin"
   ],
   "main": "src/index.js",
+  "overrides": {
+    "braces": "latest"
+  },
   "dependencies": {
     "async-throttle": "^1.1.0",
-    "globby": "^11.1.0",
+    "tinyglobby": "^0.2.17",
     "nodeify": "^1.0.1",
     "nunjucks": "^3.2.3",
     "svg2ttf": "^6.0.3",
@@ -40,15 +43,13 @@
     "css-loader": "^6.8.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.16.4",
-    "file-loader": "^2.0.0",
     "html-webpack-plugin": "^5.5.0",
     "opn": "^6.0.0",
     "style-loader": "^0.23.1",
-    "url-loader": "^1.1.2",
-    "webpack": "~4.27.1",
-    "webpack-dev-middleware": "^3.4.0",
-    "webpack-dev-server": "^4.11.0",
-    "webpack-hot-middleware": "^2.24.3"
+    "webpack": "^5.106.2",
+    "webpack-dev-middleware": "^5.3.4",
+    "webpack-dev-server": "^5.2.6",
+    "webpack-hot-middleware": "^2.26.1"
   },
   "browserslist": [
     "IE >= 10"
